@@ -1,0 +1,12 @@
+
+/*Para mantener siempre abajo el footer*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
+/*----------------fin de mantener abajo el footer*/
