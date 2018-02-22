@@ -1,8 +1,13 @@
 @extends('template.main')
 
+@section('title-body','Sistema de Control de Silabo')
 @section('class-li-active', 'active')
-@section('content')
-  <h2>Bienvenido al Sistema de Control de Silabo</h2>
+@section('home')
+    <!-- Corrusel -->
+  <div class="row carousel carousel-slider" data-indicators="true">
+    <a class="carousel-item" href="#one!"><img src="{{ asset('img/fiis.png') }}"></a>
+    <a class="carousel-item" href="#two!"><img src="{{ asset('img/fiis-2.png') }}"></a>
+  </div>
 @endsection
 
 @section('js')

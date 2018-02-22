@@ -37,14 +37,69 @@ Route::group(['prefix' => 'docente'], function(){
 	});
 });
 
-Route::group(['prefix' => 'semestre'], function(){
-	Route::get('create', function(){
-		return view('semestre.create');
-	});
+Route::group(['prefix' => 'semestres'], function(){
+	Route::get('/', [
+		'uses'=>'SemestreController@index',
+		'as'=>'semestres.index']);
+	Route::get('create', [
+		'uses'=>'SemestreController@create',
+		'as'=>'semestres.create']);
+	Route::post('/',[
+		'uses'=>'SemestreController@store',
+		'as'=>'semestres.store']);
+	Route::get('{semestre}',[
+		'uses'=>'SemestreController@show',
+		'as'=>'semestres.show']);
+	Route::get('{semestre}/edit',[
+		'uses'=>'SemestreController@edit',
+		'as'=>'semestres.edit']);
+	Route::put('{semestre}',[
+		'uses'=>'SemestreController@update',
+		'as'=>'semestres.update']);
+	Route::get('{id}/destroy',[
+		'uses'=>'SemestreController@destroy',
+		'as'=>'semestres.destroy']);
 });
 
-Route::group(['prefix' => 'curso'], function(){
-	Route::get('create', function(){
-		return view('curso.create');
-	});
+Route::group(['prefix' => 'personas'], function(){
+	Route::get('/', [
+		'uses'=>'PersonaController@index',
+		'as'=>'personas.index']);
+	Route::get('create', [
+		'uses'=>'PersonaController@create',
+		'as'=>'personas.create']);
+	Route::post('/',[
+		'uses'=>'PersonaController@store',
+		'as'=>'personas.store']);
+	Route::get('{persona}/edit',[
+		'uses'=>'PersonaController@edit',
+		'as'=>'personas.edit']);
+	Route::put('{persona}',[
+		'uses'=>'PersonaController@update',
+		'as'=>'personas.update']);
+	Route::get('{id}/destroy',[
+		'uses'=>'PersonaController@destroy',
+		'as'=>'personas.destroy']);
 });
+
+Route::group(['prefix' => 'cursos'], function(){
+	Route::get('/', [
+		'uses'=>'CursoController@index',
+		'as'=>'cursos.index']);
+	Route::get('create', [
+		'uses'=>'CursoController@create',
+		'as'=>'cursos.create']);
+	Route::post('/',[
+		'uses'=>'CursoController@store',
+		'as'=>'cursos.store']);
+	Route::get('{curso}/edit',[
+		'uses'=>'CursoController@edit',
+		'as'=>'cursos.edit']);
+	Route::put('{curso}',[
+		'uses'=>'CursoController@update',
+		'as'=>'cursos.update']);
+	Route::get('{id}/destroy',[
+		'uses'=>'CursoController@destroy',
+		'as'=>'cursos.destroy']);
+});
+

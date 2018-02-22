@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        CSilabo\Providers\AppServiceProvider::class,
+        CSilabo\Providers\AuthServiceProvider::class,
+        // CSilabo\Providers\BroadcastServiceProvider::class,
+        CSilabo\Providers\EventServiceProvider::class,
+        CSilabo\Providers\RouteServiceProvider::class,
 
         /*Mis providers*/
         Collective\Html\HtmlServiceProvider::class,

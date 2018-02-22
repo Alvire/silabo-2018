@@ -1,13 +1,9 @@
 @extends('template.main')
 
+@section('title-body','SÍLABO')
 @section('content')
 <div class="row">
-	<div class="col s12">
-		<h1 class="center-align">SÍLABO</h1>
-	</div>
-</div>
-<div class="row">
-    <form class="col s12 l10 offset-l1">
+    <form class="col s12 l10 offset-l1 card-panel hoverable">
     	<div class="row">
     		<div class="input-field col s12">
     			<input id="silabo_name" type="text" class="validate">
@@ -206,83 +202,83 @@
 					</div>
 				</div>
 			</div>
+            <div class="row">
+                <div class="col S12">
+                    <p>3.2 CAPACIDADES</p>
+                </div>
+                <div class="col s11 offset-s1">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="text" name="" id="">
+                            <label for="">Codigo</label>
+                        </div>
+                        <div class="col s9">
+                            <textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+                        </div>
+                    </div>
+
+    				<div class="row">
+    					<div class="input-field col s3">
+    						<input type="text" name="" id="">
+    						<label for="">Codigo</label>
+    					</div>
+    					<div class="col s9">
+    						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+    					</div>
+    				</div>
+
+    				<div class="row">
+    					<div class="input-field col s3">
+    						<input type="text" name="" id="">
+    						<label for="">Codigo</label>
+    					</div>
+    					<div class="col s9">
+    						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+    					</div>
+    				</div>
+                </div>
+            </div>		
 		
-		<div class="row">
-			<div class="col S12">
-				<p>3.2 CAPACIDADES</p>
-			</div>
-			<div class="col s11 offset-s1">
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
+    		<div class="row">
+    			<div class="col S12">
+    				<p>3.3 ACTITUDES</p>
+    			</div>
+    			<div class="col s11 offset-s1">
+    				<div class="row">
+    					<div class="input-field col s3">
+    						<input type="text" name="" id="">
+    						<label for="">Codigo</label>
+    					</div>
+    					<div class="col s9">
+    						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+    					</div>
+    				</div>
 
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
+    				<div class="row">
+    					<div class="input-field col s3">
+    						<input type="text" name="" id="">
+    						<label for="">Codigo</label>
+    					</div>
+    					<div class="col s9">
+    						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+    					</div>
+    				</div>
 
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
-			</div>
-		</div>		
-		
-		<div class="row">
-			<div class="col S12">
-				<p>3.3 ACTITUDES</p>
-			</div>
-			<div class="col s11 offset-s1">
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="input-field col s3">
-						<input type="text" name="" id="">
-						<label for="">Codigo</label>
-					</div>
-					<div class="col s9">
-						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
-					</div>
-				</div>
-			</div>
-
-        <div class="center-align">
-            <a class="waves-effect waves-light btn blue center-align"><i class="material-icons left">save</i>Guardar</a>
-        </div>
+    				<div class="row">
+    					<div class="input-field col s3">
+    						<input type="text" name="" id="">
+    						<label for="">Codigo</label>
+    					</div>
+    					<div class="col s9">
+    						<textarea id="" name="" class="materialize-textarea validate" placeholder="Descripcion de la competencia"></textarea>
+    					</div>
+    				</div>
+    			</div>
+            </div>
+            <div class="center-align">
+                <a class="waves-effect waves-light btn blue"><i class="material-icons left">save</i>Guardar</a>
+            </div>
+        </div> 
     </form>
   </div>
 

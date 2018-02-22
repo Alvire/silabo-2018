@@ -1,13 +1,11 @@
 @extends('template.main')
 
+@section('title-body','DOCENTE')
+
 @section('content')
 <div class="row">
-	<div class="col s12">
-		<h2 class="center-align">DOCENTE</h2>
-	</div>
-</div>
-<div class="row">
-    <form class="col s12 m10 l8 offset-m1 offset-l2">
+    <form class="col s12 l10 offset-l1" method="POST" action="{{ route('docentes.store') }}">
+        {{ csrf_field() }}
     	<div class="row">
     		<h5 class="left-align">DATOS BASICOS PARA ACTIVAR CUENTA DEL DOCENTE</h5>
     	</div>
@@ -68,6 +66,7 @@
         <div class="center-align">
             <a class="waves-effect waves-light btn blue center-align"><i class="material-icons left">save</i>Guardar</a>
         </div>
+        <br>
     </form>
   </div>
 

@@ -1,33 +1,28 @@
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="{{ url('semestre/create') }}">Crear Semestre</a></li>
-  <li class="divider"></li>
-  <li><a href="{{ url('curso/create') }}">Registrar cursos</a></li>
-  <li><a href="#!">Activar cursos</a></li>
-  <li class="divider"></li>
-  <li><a href="{{ url('docente/create') }}">Crear Usuarios Docente</a></li>
-  <li class="divider"></li>
-  <li><a href="{{ url('silabo/create') }}">Crear Silabo</a></li>
+<ul id="dropdown1" class="dropdown-content {{ $color }}">
+  <li><a href="{{ url('/') }}">Ver Perfil</a></li>
+  <li><a href="{{ url('/') }}">Editar Perfil</a></li>
+  <li class="divider {{ $colorDiv }}"></li>
+  <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
 </ul>
 
-  <nav class="blue darken-3">
+
+<!-- El contenerdor del sideNav -->
+  @include('template.partials.side-nav')
+
+<div class="navbar-fixed">
+  <nav class="{{ $colorPag }}">
     <div class="nav-wrapper">
-      <a href="{{ url('/') }}" class="brand-logo hide-on-med-and-down"><i class="material-icons md-light left md-48 hide-on-med-and-down">book</i>{{ $tema }}</a>
 
       <a href="{{ url('/') }}" class="hide-on-large-only" style="font-size: 1.8rem;">{{ $tema }}</a>
 
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="side-nav-pagina" class="button-collapse"><i class="material-icons">menu</i></a>
+      
       <ul class="right hide-on-med-and-down">
-        <li class="@yield('class-li-active')"><a href="#"><i class="material-icons left">home</i>Inicio</a></li>
-        <li><a href="#">Quienes somos</a></li>
-        <li><a href="#">Iniciativa</a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Opciones de la aplicacion<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="modal-trigger {{ $textPag }}" href="#modal-inicio-sesion">Iniciar sesion</a></li>
+        <li><a class="dropdown-button {{ $textPag }}" href="#!" data-activates="dropdown1"><div class="chip"><img src="{{ asset('img/perfil.jpg') }}" alt="Photo Profile">Nombre de usuario</div><i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
 
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li class="@yield('class-li-active')"><a href="#"><i class="material-icons left">home</i>Inicio</a></li>
-        <li><a href="#">Quienes somos</a></li>
-        <li><a href="#">Iniciativa</a></li>
-      </ul>
     </div>
   </nav>
+</div>

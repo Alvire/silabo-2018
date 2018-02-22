@@ -1,4 +1,4 @@
-	{!! Html::style('css/materialize.min.css') !!}
+	{!! Html::style('css/materialize.css') !!}
 	{!! Html::style('css/materialize-Icon.css') !!}
 	{!! Html::style('css/myCss.css') !!}
 	{{-- 
