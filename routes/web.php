@@ -103,3 +103,23 @@ Route::group(['prefix' => 'cursos'], function(){
 		'as'=>'cursos.destroy']);
 });
 
+Route::group(['prefix' => 'silabos'], function(){
+	Route::get('/', [
+		'uses'=>'SilaboController@index',
+		'as'=>'silabos.index']);
+	Route::get('create', [
+		'uses'=>'SilaboController@create',
+		'as'=>'silabos.create']);
+	Route::post('/',[
+		'uses'=>'SilaboController@store',
+		'as'=>'silabos.store']);
+	Route::get('{silabo}/edit',[
+		'uses'=>'SilaboController@edit',
+		'as'=>'silabos.edit']);
+	Route::put('{silabo}',[
+		'uses'=>'SilaboController@update',
+		'as'=>'silabos.update']);
+	Route::get('{id}/destroy',[
+		'uses'=>'SilaboController@destroy',
+		'as'=>'silabos.destroy']);
+});

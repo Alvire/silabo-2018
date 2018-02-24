@@ -33,7 +33,7 @@
         <li><a href="{{ route('semestres.index') }}" class="{{ $textSid }}">Semestres</a></li>
         <li><a href="{{ route('cursos.index') }}" class="{{ $textSid }}">Cursos</a></li>
         <li><a href="{{ route('personas.index') }}" class="{{ $textSid }}">Docentes</a></li>   
-        <li><a href="" class="{{ $textSid }}">Silabos</a></li>        
+        <li><a href="{{ route('silabos.create') }}" class="{{ $textSid }}">Silabos</a></li>        
         <li class="divider {{ $colorDiv }}"></li>
         {{-- END SideNav del director --}}
 

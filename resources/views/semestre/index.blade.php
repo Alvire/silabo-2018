@@ -3,7 +3,38 @@
 @section('title-body','SEMESTRES')
 @section('content')
 <div class="row">
+<!-- Modal Registro de semestre -->
+  <div id="semestre-edit" class="modal">
+    <div class="modal-content">      
+      <div class="row">
+          <form class="col s12 m10 l8 offset-l2 offset-m1" method="POST" action="{{ route('semestres.store') }}">
+            {{ csrf_field() }}
+            <div class="row center-align"><h4>Registro de Semestre</h4></div>
+            <div class="row">
+              <div class="col s6 m2 offset-m1">
+                <p class="">AÑO</p>
+              </div>
+              <div class="col s6 m3">
+                <input type="text" name="año" id="año" class="validate" placeholder="AÑO">
+              </div>
+                  <div class="col s6 m2 offset-m1">
+                      <p class="">NÚMERO</p>
+                  </div>
+                  <div class="col s6 m3">
+                      <input type="text" name="numero" id="numero" class="validate" placeholder="NÚMERO">
+                  </div>
+            </div>
 
+              <div class="center-align">
+                  <button type="submit" class="waves-effect waves-light btn blue center-align"><i class="material-icons left">save</i>Guardar</button>
+              </div>
+              <br>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  
 
     <div class="col s12 m9 nav nav-wrapper">
       <form>
@@ -38,7 +69,7 @@
             <td>{{ $semestre->id }}</td>
             <td>{{ $semestre->año.' - '.$semestre->numero }}</td>
             <td>
-                <a class="btn-floating waves-effect waves-light green darken-4"><i class="material-icons">edit</i></a>
+                <a class="btn-floating waves-effect waves-light green darken-4 modal-trigger" href="#semestre-edit"><i class="material-icons">edit</i></a>
                 <a class="btn-floating waves-effect waves-light red darken-4"><i class="material-icons">delete</i></a>
                 <a class="btn-floating waves-effect waves-light blue darken-4" href="{{ route('semestres.show',$semestre->id) }}"><i class="material-icons">remove_red_eye</i></a>
             </td>
